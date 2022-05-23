@@ -11,6 +11,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.card_big_screen {
+    display: none;
+}
+
 .card_container_small {
     padding: 10px 20px;
 }
@@ -19,10 +23,16 @@
     display: flex;
 }
 
+.card_container_xs {
+    width: 88%;
+    margin: 0 auto;
+}
+
 .card_container img {
     width: 100%;
+    height: 100%;
     display: block;
-    position: relative;
+    object-fit: cover;
 }
 
 .card_container a{
@@ -36,6 +46,10 @@
     font-weight: 500;
     padding: 15px 20px;
     border-radius: 15px;
+}
+
+.fa-solid.fa-arrow-up-long {
+    rotate: 40deg;
 }
 
 /* CARD IMAGE -------------------------------*/
@@ -74,7 +88,7 @@
     vertical-align: middle;
 }
 
-/* Review Square  */
+/* Review Square ----------------*/
 .card_review .card_review_square {
     width: 15px;
     height: 15px;
@@ -83,18 +97,18 @@
     display: inline-block;
 }
 
-/* All review */
+/* All review -----------------*/
 .card_all_review a{
-    font-size: 0.9rem;
-    border-bottom: 1px dotted;
+    text-decoration: underline dotted;;
 }
 
-/* Best of */
+/* Best of ----------------------*/
 .card_review .card_best_of p{
     font-size: 0.95rem;
+    padding: 5px 0;
 }
 
-/* Service Offered + Security*/
+/* Service Offered + Security ----*/
 .card_small_view {
     display: none;
 }
@@ -118,7 +132,7 @@
 
 .card_services_description a,
 .card_security_description a  {
-    border-bottom: 1px dotted;
+    text-decoration: underline dotted;
 }
 
 .card_security_icons a,
@@ -128,9 +142,8 @@
 }
 
 /* PRINCE & CONDITIONS ---------------------------------*/
-/* Offers */
+/* Offers ---------------------*/
 .card_price_offer {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
@@ -140,48 +153,209 @@
     font-weight: 400;
     color: red;
     text-decoration: line-through;
+    line-height: 5px;
 }
 
 .card_price_offer h3 {
     font-size: 30px;
+    padding-top: 5px;
 }
 
-/* Expedia Web */
+/* Expedia Web ------------------*/
 .card_expedia {
     font-size: 1.1rem;
     font-weight: 300;
 }
 
-/* Cancel Condition */
-.card_check_icons, 
-.card_calcel_info {
-    flex-direction: column;
-    padding-right: 10px;
+/* Cancel Condition --------------*/
+.card_calcel_condition {
+    padding: 10px 0;
+    border-bottom: 1px solid #dedede;
 }
 
-.card_check_icons i, 
-.card_calcel_info h4 {
-    font-size: 20px;
+.card_yes {
+    font-size: 1.3rem;
+    line-height: 30px;
 }
 
-.card_calcel_info h5 {
-    font-size: 15px;
+.card_yes i {
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.card_yes h5 {
     font-weight: 400;
 }
 
-.card_check_icons i, 
-.card_calcel_info h4 ,
-.card_calcel_info h5 {
-    line-height: 28px;
+.card_yes h4 {
+    font-weight: 500;
 }
 
+/* Other offer -----------*/
+.card_other_offer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
 @media screen and (min-width: 992px){
-    /* Services Offered + Security */
-    .card_small_view {
+    /* COMMON */
+    .card_small_screen {
+        display: none;
+    }
+
+    .card_big_screen {
+        display: block;
+    }
+    .card_container {
+        display: flex;
+    }
+
+    .card_img {
+        width: 25%;
+        position: relative;
+    }
+
+    .card_container_small {
+        display: flex; 
+        flex-direction: column;
+        width: 75%;
+        padding: 10px 0 ;
+    }
+
+    .card_content {
+        display: flex;
+    }
+
+    /* Order */
+
+    .card_price_conditions {
+        order: 1;
+    }
+
+    .card_other_offer {
+        order: 2;
+    }
+
+    .card_review {
+        order: 3;
+    }
+
+    /* Card Title */
+    .card_title h2 {
+        font-size: 1.5rem;
+        padding-left: 17px;
+    }
+
+    /* Card Img  */
+    .card_heart a{
+        top: 10px;
+        right: 10px;
+    }
+
+     /* Services Offered + Security */
+     .card_small_view {
         display: block;
     }
 
     .card_security {
         display: none;
     }
+
+
+    /* PRICE & CONDITIONS */
+    .card_price_conditions {
+        width: 35%;
+        border-right: 2px dotted #dedede;
+    }
+    .card_price_offer {
+        text-align: center;
+    }
+
+    .card_expedia img{
+        width: 130px;  
+    }
+
+    .card_expedia {
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .card_price {
+        padding: 10px 0 15px 0;
+    }
+    
+    .card_price h4 {
+        font-size: 1.8rem;
+    }
+
+    .card_price h3 {
+        font-size: 1.9rem;
+        padding-top: 15px;
+    }
+
+    .card_btn {
+        padding: 15px 30px;
+    }
+
+    /* Cancel Condition */
+    .card_calcel_condition {
+        border: none;
+    }
+
+    /* Other offer */
+    .card_other_offer {
+        width: 25%;
+        border-right: 2px dotted #dedede;
+    }
+
+    .card_top_other_offer {
+        border-bottom: 2px solid #dedede;
+    }
+
+    .card_different_price {
+        padding-bottom: 20px;
+        font-size: 1.2rem;
+    }
+
+    .card_different_price h4{
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    .card_different_price.booking h4 {
+        color: red;
+    }
+
+    .card_bottom_other_offer {
+        padding-top: 15px;
+    }
+
+    /* Card Review  */
+    .card_review {
+        width: 40%;
+    }
+
+    .card_review .card_review_square {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Best Of */
+
+    .card_review .card_best_of p {
+        padding: 10px 0;
+      }
+
+      /* Services Offered + Security */
+      .card_services_offered {
+          padding: 10px 0;
+      }
+
+      .card_services_icons i,
+      .card_services_description span,
+      .card_services_description a {
+          padding-bottom: 5px;
+      }
 }
