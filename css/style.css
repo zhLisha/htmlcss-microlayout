@@ -11,10 +11,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.card_big_screen {
-    display: none;
-}
-
 .card_container_small {
     padding: 10px 20px;
 }
@@ -109,10 +105,6 @@
 }
 
 /* Service Offered + Security ----*/
-.card_small_view {
-    display: none;
-}
-
 .card_security {
     padding: 7px 0;
 }
@@ -198,164 +190,143 @@
 }
 
 
+/* ---------------------------------------------- 
+                    BIG SCREEN
+-------------------------------------------------*/
 
-@media screen and (min-width: 992px){
-    /* COMMON */
-    .card_small_screen {
-        display: none;
-    }
+/* COMMON */
 
-    .card_big_screen {
-        display: block;
-    }
-    .card_container {
-        display: flex;
-    }
+.card_container.big .card_img {
+    width: 25%;
+    position: relative;
+}
 
-    .card_img {
-        width: 25%;
-        position: relative;
-    }
+.card_container.big .card_container_small {
+    flex-direction: column;
+    width: 75%;
+    padding: 10px 0 ;
+}
 
-    .card_container_small {
-        display: flex; 
-        flex-direction: column;
-        width: 75%;
-        padding: 10px 0 ;
-    }
+/* Order*/
+.card_container.big .card_price_conditions {
+    order: 1;
+}
 
-    .card_content {
-        display: flex;
-    }
+.card_container.big .card_other_offer {
+    order: 2;
+}
 
-    /* Order */
+.card_container.big .card_review {
+    order: 3;
+}
 
-    .card_price_conditions {
-        order: 1;
-    }
+/* Card Title */
+.card_container.big .card_title h2 {
+    font-size: 1.5rem;
+    padding-left: 17px;
+}
 
-    .card_other_offer {
-        order: 2;
-    }
+/* Card Img  */
+.card_container.big .card_heart a{
+    top: 10px;
+    right: 10px;
+}
 
-    .card_review {
-        order: 3;
-    }
+/* Services Offered + Security */
+.card_container.big .card_small_view {
+    display: block;
+}
 
-    /* Card Title */
-    .card_title h2 {
-        font-size: 1.5rem;
-        padding-left: 17px;
-    }
+/* PRICE & CONDITIONS */
+.card_container.big .card_price_conditions {
+    width: 35%;
+    border-right: 2px dotted #dedede;
+}
+.card_container.big .card_price_offer {
+    text-align: center;
+}
 
-    /* Card Img  */
-    .card_heart a{
-        top: 10px;
-        right: 10px;
-    }
+.card_container.big .card_expedia img{
+    width: 130px;  
+}
 
-     /* Services Offered + Security */
-     .card_small_view {
-        display: block;
-    }
+.card_container.big .card_expedia {
+    justify-content: center;
+    padding-bottom: 10px;
+}
 
-    .card_security {
-        display: none;
-    }
-
-
-    /* PRICE & CONDITIONS */
-    .card_price_conditions {
-        width: 35%;
-        border-right: 2px dotted #dedede;
-    }
-    .card_price_offer {
-        text-align: center;
-    }
-
-    .card_expedia img{
-        width: 130px;  
-    }
-
-    .card_expedia {
-        justify-content: center;
-        padding-bottom: 10px;
-    }
-
-    .card_price {
-        padding: 10px 0 15px 0;
-    }
+.card_price {
+    padding: 10px 0 15px 0;
+}
     
-    .card_price h4 {
-        font-size: 1.8rem;
-    }
+.card_container.big .card_price h4 {
+    font-size: 1.8rem;
+}
 
-    .card_price h3 {
-        font-size: 1.9rem;
-        padding-top: 15px;
-    }
+.card_container.big .card_price h3 {
+    font-size: 1.9rem;
+    padding-top: 15px;
+}
 
-    .card_btn {
-        padding: 15px 30px;
-    }
+.card_container.big .card_btn {
+    padding: 15px 30px;
+}
 
-    /* Cancel Condition */
-    .card_calcel_condition {
-        border: none;
-    }
+/* Cancel Condition */
+.card_container.big .card_container.big .card_calcel_condition {
+    border: none;
+}
 
-    /* Other offer */
-    .card_other_offer {
-        width: 25%;
-        border-right: 2px dotted #dedede;
-    }
+/* Other offer */
+.card_container.big .card_other_offer {
+    width: 25%;
+    border-right: 2px dotted #dedede;
+}
 
-    .card_top_other_offer {
-        border-bottom: 2px solid #dedede;
-    }
+.card_container.big .card_top_other_offer {
+    border-bottom: 2px solid #dedede;
+}
 
-    .card_different_price {
-        padding-bottom: 20px;
-        font-size: 1.2rem;
-    }
+.card_container.big .card_different_price {
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
 
-    .card_different_price h4{
-        font-size: 1.25rem;
-        font-weight: 400;
-    }
+.card_container.big .card_different_price h4{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
 
-    .card_different_price.booking h4 {
-        color: red;
-    }
+.card_container.big .card_different_price.booking h4 {
+    color: red;
+}
 
-    .card_bottom_other_offer {
-        padding-top: 15px;
-    }
+.card_container.big .card_bottom_other_offer {
+    padding-top: 15px;
+}
 
-    /* Card Review  */
-    .card_review {
-        width: 40%;
-    }
+/* Card Review  */
+.card_container.big .card_review {
+    width: 40%;
+}
 
-    .card_review .card_review_square {
-        width: 20px;
-        height: 20px;
-    }
+.card_container.big .card_review .card_review_square {
+    width: 20px;
+    height: 20px;
+}
 
-    /* Best Of */
+ /* Best Of */
+ .card_container.big .card_review .card_best_of p {
+    padding: 10px 0;
+}
 
-    .card_review .card_best_of p {
-        padding: 10px 0;
-      }
+/* Services Offered + Security */
+.card_container.big .card_services_offered {
+    padding: 10px 0;
+}
 
-      /* Services Offered + Security */
-      .card_services_offered {
-          padding: 10px 0;
-      }
-
-      .card_services_icons i,
-      .card_services_description span,
-      .card_services_description a {
-          padding-bottom: 5px;
-      }
+.card_container.big .card_services_icons i,
+.card_container.big .card_services_description span,
+.card_container.big .card_services_description a {
+    padding-bottom: 5px;
 }
